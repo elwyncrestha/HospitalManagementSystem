@@ -1,1 +1,8 @@
+com\elvin\service\DoctorService.class
+com\elvin\serviceImpl\DoctorServiceImpl.class
+com\elvin\modal\Doctor.class
 com\elvin\controller\IndexController.class
+com\elvin\controller\DoctorController.class
+com\elvin\controller\AdminController.class
+com\elvin\daoImpl\DoctorDaoImpl.class
+com\elvin\dao\DoctorDao.class
