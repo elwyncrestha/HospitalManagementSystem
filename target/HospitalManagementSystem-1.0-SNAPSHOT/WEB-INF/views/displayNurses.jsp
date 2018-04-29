@@ -1,6 +1,6 @@
 <%-- 
-    Document   : displayDoctors
-    Created on : Apr 28, 2018, 8:29:09 AM
+    Document   : displayNurses
+    Created on : Apr 29, 2018, 7:08:58 AM
     Author     : elwyn
 --%>
 
@@ -30,7 +30,7 @@
                     <div class="right_col" role="main">
                         <div class="page-title">
                             <div class="title_left">
-                                <h3>Doctors</h3>
+                                <h3>Nurses</h3>
                             </div>
 
                             <div class="title_right">
@@ -50,7 +50,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h2>Displaying Doctors <small>Available Informations</small></h2>
+                                        <h2>Displaying Nurses <small>Available Informations</small></h2>
                                         <ul class="nav navbar-right panel_toolbox">
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
@@ -73,13 +73,13 @@
 
 
                                             <tbody>
-                                                <c:forEach items="${DoctorDetails}" var="doc">
+                                                <c:forEach items="${NurseDetails}" var="nurse">
                                                     <tr>
-                                                        <td>${doc.doctorFirstName} ${doc.doctorLastName}</td>
-                                                        <td>${doc.doctorGender}</td>
-                                                        <td>${doc.doctorDOB}</td>
-                                                        <td>${doc.doctorEduBG}</td>
-                                                        <td>${doc.doctorCountry}</td>
+                                                        <td>${nurse.nurseFirstName} ${nurse.nurseLastName}</td>
+                                                        <td>${nurse.nurseGender}</td>
+                                                        <td>${nurse.nurseDOB}</td>
+                                                        <td>${nurse.nurseEduBG}</td>
+                                                        <td>${nurse.nurseCountry}</td>
                                                     </tr>
                                                 </c:forEach>
                                             </tbody>

@@ -10,9 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <jsp:include page="pageheader.jsp">
-            <jsp:param name="title" value="Add Doctor"></jsp:param>
-        </jsp:include>
+        <jsp:include page="pageheader.jsp"></jsp:include>
     </head>
 
     <body class="nav-md">
