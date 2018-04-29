@@ -69,11 +69,11 @@
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                             <span class="count_top"><i class="fa fa-hospital-o"></i> Total Departments</span>
-                            <div class="count">4,567</div>
+                            <div class="count">${CountDepartment}</div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                             <span class="count_top"><i class="fa fa-ambulance"></i> Total Services</span>
-                            <div class="count">2,315</div>
+                            <div class="count">${CountService}</div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                             <span class="count_top"><i class="fa fa-clock-o"></i> Current Time</span>

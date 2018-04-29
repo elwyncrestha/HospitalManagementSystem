@@ -96,7 +96,7 @@
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input id="birthday" name="nurseDOB" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="yyyy-MM-dd" value="${EditNurseDetails.nurseDOB}">
+                                                    <input id="birthday" name="nurseDOB" class="date-picker form-control col-md-7 col-xs-12" required="required" type="date" value="${EditNurseDetails.nurseDOB}">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -396,6 +396,7 @@
                                     <table id="datatable" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
+                                                <th>Id</th>
                                                 <th>Name</th>
                                                 <th>Gender</th>
                                                 <th>Date of Birth</th>
@@ -410,6 +411,7 @@
                                         <tbody>
                                             <c:forEach items="${NurseDetails}" var="nurse">
                                                 <tr>
+                                                    <td>${nurse.nurseId}</td>
                                                     <td>${nurse.nurseFirstName} ${nurse.nurseLastName}</td>
                                                     <td>${nurse.nurseGender}</td>
                                                     <td>${nurse.nurseDOB}</td>
