@@ -24,4 +24,6 @@ public interface NurseService {
     
     void deleteNurse(int id);
     
+    long countNurse();
+    
 }

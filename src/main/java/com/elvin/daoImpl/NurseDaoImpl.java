@@ -6,10 +6,12 @@
 package com.elvin.daoImpl;
 
 import com.elvin.dao.NurseDao;
+import com.elvin.modal.Doctor;
 import com.elvin.modal.Nurse;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -67,6 +69,15 @@ public class NurseDaoImpl implements NurseDao{
         session.delete(nurse);
         session.getTransaction().commit();
         session.close();
+    }
+
+    @Override
+    public long getTotalNurse() {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        long totalNurse = (long) session.createCriteria(Nurse.class).setProjection(Projections.rowCount()).uniqueResult();
+        session.close();
+        return totalNurse;
     }
     
 }

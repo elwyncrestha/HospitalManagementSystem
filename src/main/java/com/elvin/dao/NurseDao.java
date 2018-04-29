@@ -24,4 +24,6 @@ public interface NurseDao {
     
     void delete(Nurse nurse);
     
+    long getTotalNurse();
+    
 }

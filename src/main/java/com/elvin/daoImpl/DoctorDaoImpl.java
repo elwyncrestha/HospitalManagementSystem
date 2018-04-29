@@ -10,6 +10,7 @@ import com.elvin.modal.Doctor;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -67,6 +68,15 @@ public class DoctorDaoImpl implements DoctorDao{
         session.delete(doctor);
         session.getTransaction().commit();
         session.close();
+    }
+
+    @Override
+    public long getTotalDoctor() {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        long totalDoc = (long) session.createCriteria(Doctor.class).setProjection(Projections.rowCount()).uniqueResult();
+        session.close();
+        return totalDoc;
     }
     
 }
