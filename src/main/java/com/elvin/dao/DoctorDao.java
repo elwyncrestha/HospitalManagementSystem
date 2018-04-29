@@ -24,4 +24,6 @@ public interface DoctorDao {
     
     void delete(Doctor doctor);
     
+    long getTotalDoctor();
+    
 }

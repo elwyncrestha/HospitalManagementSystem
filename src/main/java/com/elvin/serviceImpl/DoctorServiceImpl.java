@@ -50,5 +50,10 @@ public class DoctorServiceImpl implements DoctorService{
     public void deleteDoctor(Doctor doctor) {
         doctorDao.delete(doctor);
     }
+
+    @Override
+    public long countDoc() {
+        return doctorDao.getTotalDoctor();
+    }
     
 }

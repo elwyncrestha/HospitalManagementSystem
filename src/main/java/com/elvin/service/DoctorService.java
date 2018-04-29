@@ -24,4 +24,6 @@ public interface DoctorService {
     
     void deleteDoctor(Doctor doctor);
     
+    long countDoc();
+    
 }

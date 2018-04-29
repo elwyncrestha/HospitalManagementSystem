@@ -49,5 +49,10 @@ public class NurseServiceImpl implements NurseService{
         Nurse nurse = nurseDao.getById(id);
         nurseDao.delete(nurse);
     }
+
+    @Override
+    public long countNurse() {
+        return nurseDao.getTotalNurse();
+    }
     
 }
