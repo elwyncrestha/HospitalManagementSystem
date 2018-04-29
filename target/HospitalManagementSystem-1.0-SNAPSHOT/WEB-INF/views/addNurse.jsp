@@ -90,7 +90,7 @@
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input id="birthday" name="nurseDOB" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="yyyy-MM-dd">
+                                                    <input id="birthday" name="nurseDOB" class="date-picker form-control col-md-7 col-xs-12" required="required" type="date">
                                                 </div>
                                             </div>
                                             <div class="form-group">

@@ -63,6 +63,7 @@
                                         <table id="datatable" class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
+                                                    <th>Id</th>
                                                     <th>Name</th>
                                                     <th>Gender</th>
                                                     <th>Date of Birth</th>
@@ -75,6 +76,7 @@
                                             <tbody>
                                                 <c:forEach items="${NurseDetails}" var="nurse">
                                                     <tr>
+                                                        <td>${nurse.nurseId}</td>
                                                         <td>${nurse.nurseFirstName} ${nurse.nurseLastName}</td>
                                                         <td>${nurse.nurseGender}</td>
                                                         <td>${nurse.nurseDOB}</td>

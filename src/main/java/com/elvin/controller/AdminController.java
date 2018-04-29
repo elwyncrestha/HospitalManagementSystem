@@ -5,7 +5,9 @@
  */
 package com.elvin.controller;
 
+import com.elvin.service.DepartmentService;
 import com.elvin.service.DoctorService;
+import com.elvin.service.HServiceService;
 import com.elvin.service.NurseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,10 +28,18 @@ public class AdminController {
     @Autowired
     NurseService nurseService;
     
+    @Autowired
+    HServiceService hServiceService;
+    
+    @Autowired
+    DepartmentService departmentService;
+    
     @RequestMapping(value = "/admin/dashboard", method = RequestMethod.GET)
-    public String displayAdminHome(Model modelCountDoc, Model modelCountNurse){
+    public String displayAdminHome(Model modelCountDoc, Model modelCountNurse, Model modelCountService, Model modelCountDepartment){
         modelCountDoc.addAttribute("CountDoc", doctorService.countDoc());
         modelCountNurse.addAttribute("CountNurse", nurseService.countNurse());
+        modelCountService.addAttribute("CountService", hServiceService.countService());
+        modelCountDepartment.addAttribute("CountDepartment", departmentService.countDepartments());
         return "adminHome";
     }
     
