@@ -79,7 +79,6 @@
             <ul class="nav side-menu">
                 <li><a><i class="fa fa-group"></i> Events <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="${cp}/admin/event/add">Add Event</a></li>
                         <li><a href="${cp}/admin/event/display">Display Events</a></li>
                     </ul>
                 </li>

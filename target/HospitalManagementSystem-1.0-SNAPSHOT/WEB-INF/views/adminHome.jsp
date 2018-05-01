@@ -65,7 +65,7 @@
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                             <span class="count_top"><i class="fa fa-wheelchair"></i> Total Patients</span>
-                            <div class="count">2,500</div>
+                            <div class="count">${CountPatient}</div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                             <span class="count_top"><i class="fa fa-hospital-o"></i> Total Departments</span>
