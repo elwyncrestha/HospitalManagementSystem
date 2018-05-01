@@ -12,12 +12,12 @@
     <html lang="en">
         <head>
         <jsp:include page="pageheader.jsp"></jsp:include>
-    </head>
+        </head>
 
-    <body class="nav-md">
-        <div class="container body">
-            <div class="main_container">
-                <div class="col-md-3 left_col">
+        <body class="nav-md">
+            <div class="container body">
+                <div class="main_container">
+                    <div class="col-md-3 left_col">
                     <jsp:include page="leftnav.jsp"></jsp:include>
                     </div>
 
@@ -63,7 +63,7 @@
                                     <div class="x_content">
                                         <br />
                                         <form action="${cp}/admin/doctor/edit" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="doctorId">ID <span class="required">*</span>
                                             </label>

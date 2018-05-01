@@ -52,7 +52,10 @@
     <link href="<c:url value="/resources/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"></c:url>" rel="stylesheet">
     <!--added while displayDoctor -->
     
-    
+    <!-- added while login -->
+    <!-- Animate.css -->
+    <link href="<c:url value = "/resources/vendors/animate.css/animate.min.css"></c:url>" rel="stylesheet">
+    <!-- added while login -->
     
 
     <!-- Custom Theme Style -->
