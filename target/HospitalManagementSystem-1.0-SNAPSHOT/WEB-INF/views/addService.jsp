@@ -62,7 +62,7 @@
                                     <div class="x_content">
                                         <br />
                                         <form action="${cp}/admin/service/add" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="service-name">Service Name <span class="required">*</span>
                                             </label>
