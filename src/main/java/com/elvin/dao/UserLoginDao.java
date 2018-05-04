@@ -22,4 +22,14 @@ public interface UserLoginDao {
     
     void delete(UserLogin userLogin);
     
+    boolean validate(String username, String email);
+    
+    UserLogin getBy_UsernameEmail(String username, String email);
+    
+    void update(UserLogin userLogin);
+    
+    UserLogin getBy_EmailAndPassword(String email, String password);
+    
+    boolean validateByEmailAndPassword(String email, String password);
+    
 }

@@ -5,6 +5,8 @@
  */
 package com.elvin.controller;
 
+import com.elvin.mixedservice.MailService;
+import com.elvin.mixedservice.RandomCodeGenerator;
 import com.elvin.modal.UserLogin;
 import com.elvin.service.UserLoginService;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -82,4 +85,64 @@ public class UserLoginController {
         return "editUser";
     }
     
+    @RequestMapping(value = "/user/reset", method = RequestMethod.GET)
+    public String resetPassword(){
+        return "resetPassword";
+    }
+    
+    @PostMapping(value = "/user/reset")
+    public String validateUser(@RequestParam("username") String username, @RequestParam("email") String email, Model model){
+        String returnString = null;
+        boolean userStatus = userLoginService.validateUserByUserNameAndEmail(username, email);
+        
+        if (userStatus) {
+            RandomCodeGenerator randomCodeGenerator = new RandomCodeGenerator();
+            String newPassword = randomCodeGenerator.getRandomCode(20);
+            
+            
+            //update password in database
+            UserLogin userLogin = userLoginService.getUserByUsernameAndEmail(username, email);
+            userLogin.setPassword(newPassword);
+            userLoginService.updateUser(userLogin);
+            
+            MailService sender = new MailService(); 
+            sender = sender.getMailService();   //gets mail service object
+            sender.sendDetailMail("elvinjava1@gmail.com", email, "Password change", "Your new password is: " + newPassword);
+            
+            model.addAttribute("LogoutMessage", "Password changed successfully ! New password is sent to your email");
+            return "login";
+            
+        }else{
+            model.addAttribute("ResetMessage", "Wrong username or email");
+            returnString = "resetPassword";
+        }
+        
+        return returnString;
+    }
+    
+    @GetMapping(value = "/user/changepassword")
+    public String displayPasswordEditPage(){
+        return "editPassword";
+    }
+    
+    @PostMapping(value = "/user/changepassword")
+    public String editPassword(@RequestParam("email") String email, @RequestParam("oldPassword") String oldPassword, @RequestParam("newPassword") String newPassword, Model model){
+        
+        boolean userStatus = userLoginService.validateUserByEmailAndPassword(email, oldPassword);
+        String returnString = null;
+        
+        if (userStatus) {
+            UserLogin userLogin = userLoginService.getUserByPasswordAndEmail(oldPassword, email);
+            userLogin.setPassword(newPassword);
+            userLoginService.updateUser(userLogin);
+            model.addAttribute("LogoutMessage", "Password changed successfully !!!");
+            returnString = "login";
+        }
+        else{
+            model.addAttribute("ChangeFailMessage", "Wrong email or password !!!");
+            returnString = "editPassword";
+        }
+        
+        return returnString;
+    }
 }

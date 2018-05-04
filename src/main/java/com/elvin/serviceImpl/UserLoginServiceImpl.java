@@ -44,5 +44,30 @@ public class UserLoginServiceImpl implements UserLoginService{
         UserLogin userLogin = userLoginDao.getById(id);
         userLoginDao.delete(userLogin);
     }
+
+    @Override
+    public boolean validateUserByUserNameAndEmail(String username, String email) {
+        return userLoginDao.validate(username, email);
+    }
+
+    @Override
+    public UserLogin getUserByUsernameAndEmail(String username, String email) {
+        return userLoginDao.getBy_UsernameEmail(username, email);
+    }
+
+    @Override
+    public void updateUser(UserLogin userLogin) {
+        userLoginDao.update(userLogin);
+    }
+
+    @Override
+    public UserLogin getUserByPasswordAndEmail(String password, String email) {
+        return userLoginDao.getBy_EmailAndPassword(email, password);
+    }
+
+    @Override
+    public boolean validateUserByEmailAndPassword(String email, String password) {
+        return userLoginDao.validateByEmailAndPassword(email, password);
+    }
     
 }

@@ -28,6 +28,7 @@ com\elvin\daoImpl\DoctorDaoImpl.class
 com\elvin\dao\NurseDao.class
 com\elvin\service\PatientService.class
 com\elvin\controller\PatientController.class
+com\elvin\mixedservice\MailService.class
 com\elvin\modal\Doctor.class
 com\elvin\controller\NurseController.class
 com\elvin\daoImpl\PatientDaoImpl.class

@@ -22,4 +22,14 @@ public interface UserLoginService {
     
     void deleteUser(int id);
     
+    boolean validateUserByUserNameAndEmail(String username, String email);
+    
+    UserLogin getUserByUsernameAndEmail(String username, String email);
+    
+    void updateUser(UserLogin userLogin);
+    
+    UserLogin getUserByPasswordAndEmail(String password, String email);
+    
+    boolean validateUserByEmailAndPassword(String email, String password);
+    
 }

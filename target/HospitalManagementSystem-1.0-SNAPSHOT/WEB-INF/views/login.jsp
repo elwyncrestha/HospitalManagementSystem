@@ -35,7 +35,7 @@
                             </div>
                             <div>
                                 <input type="submit" class="btn btn-default submit" value="Log in">
-                                <a class="reset_pass" href="${pageContext.request.contextPath}/reset">Lost your password?</a>
+                                <a class="reset_pass" href="${pageContext.request.contextPath}/user/reset">Lost your password?</a>
                             </div>
 
                             <div class="clearfix"></div>
@@ -43,6 +43,9 @@
                             <div class="separator">
                                 <p class="change_link">New to site?
                                     <a href="#signup" class="to_register"> Create Account </a>
+                                </p>
+                                <p class="change_link">Want new password?
+                                    <a href="${pageContext.request.contextPath}/user/changepassword" class="to_register"> Change password </a>
                                 </p>
 
                                 <div class="clearfix"></div>
