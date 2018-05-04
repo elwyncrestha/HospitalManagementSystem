@@ -15,8 +15,8 @@
                              default-target-url="/admin/dashboard" authentication-failure-url="/login/failure"
                              login-page="/login" login-processing-url="/login" />
         
-        <security:logout invalidate-session="true" delete-cookies="AppCookies"
-                         logout-url="/logout" logout-success-url="/index" />
+<!--        <security:logout invalidate-session="true" delete-cookies="AppCookies"
+                         logout-url="/logout" logout-success-url="/index" />-->
     </security:http>
     
     <security:authentication-manager>

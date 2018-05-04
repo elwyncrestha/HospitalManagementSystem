@@ -10,15 +10,9 @@ import com.elvin.service.DoctorService;
 import com.elvin.service.HServiceService;
 import com.elvin.service.NurseService;
 import com.elvin.service.PatientService;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -53,30 +47,5 @@ public class AdminController {
         modelCountPatient.addAttribute("CountPatient", patientService.countPatients());
         return "adminHome";
     }
-    
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String displayLogin(){
-        return "login";
-    }
-    
-    //NOTE: login post method processed through spring-security.xml
-    
-    @GetMapping(value = "/login/failure")
-    public String returnFailedLogin(Model model){
-        model.addAttribute("LoginMessage", "Wrong username or password !!!");
-        return "login";
-    }
-    
-    @GetMapping(value = "/logout")
-    public String returnLogin(HttpServletRequest request, HttpServletResponse response, Model model){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            new SecurityContextLogoutHandler().logout(request, response, auth);
-        }
-        model.addAttribute("LogoutMessage", "Logout successful !!!");
-        return "login";
-    }
-    
-    
     
 }

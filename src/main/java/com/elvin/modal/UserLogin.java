@@ -28,6 +28,8 @@ public class UserLogin {
     
     private String username;
     
+    private String email;
+    
     private String password;
     
     private int active;
@@ -39,17 +41,21 @@ public class UserLogin {
     public UserLogin() {
     }
 
-    public UserLogin(int id, String username, String password, int active) {
+    public UserLogin(int id, String username, String email, String password, int active, UserRole userRole) {
         this.id = id;
         this.username = username;
+        this.email = email;
         this.password = password;
         this.active = active;
+        this.userRole = userRole;
     }
 
-    public UserLogin(String username, String password, int active) {
+    public UserLogin(String username, String email, String password, int active, UserRole userRole) {
         this.username = username;
+        this.email = email;
         this.password = password;
         this.active = active;
+        this.userRole = userRole;
     }
 
     public int getId() {
@@ -68,6 +74,14 @@ public class UserLogin {
         this.username = username;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -83,4 +97,14 @@ public class UserLogin {
     public void setActive(int active) {
         this.active = active;
     }
+
+    public UserRole getUserRole() {
+        return  userRole;
+    }
+
+    public void setUserRole(UserRole userRole) {
+        this.userRole = userRole;
+    }
+    
+    
 }

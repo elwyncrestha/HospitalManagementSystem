@@ -35,21 +35,24 @@
                             </div>
                             <div>
                                 <input type="submit" class="btn btn-default submit" value="Log in">
-                                <a class="reset_pass" href="${pageContext.request.contextPath}/reset">Lost your password?</a>
+                                <a class="reset_pass" href="${pageContext.request.contextPath}/user/reset">Lost your password?</a>
                             </div>
 
                             <div class="clearfix"></div>
 
                             <div class="separator">
                                 <p class="change_link">New to site?
-                                    <a href="${pageContext.request.contextPath}/register" class="to_register"> Create Account </a>
+                                    <a href="#signup" class="to_register"> Create Account </a>
+                                </p>
+                                <p class="change_link">Want new password?
+                                    <a href="${pageContext.request.contextPath}/user/changepassword" class="to_register"> Change password </a>
                                 </p>
 
                                 <div class="clearfix"></div>
                                 <br />
 
                                 <div>
-                                    <h1><i class="fa fa-medkit"></i> Elvin Hospital</h1>
+                                    <h1><i class="fa fa-medkit"></i> Hospital Management System</h1>
                                     <p>© 2018 All Rights Reserved</p>
                                 </div>
                             </div>
@@ -59,19 +62,21 @@
 
                 <div id="register" class="animate form registration_form">
                     <section class="login_content">
-                        <form>
+                        <form action="${pageContext.request.contextPath}/register" method="post">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                             <h1>Create Account</h1>
+                            <p>Note: <span class="small">You'll not be able to login until admin activates your account</span></p>
                             <div>
-                                <input type="text" class="form-control" placeholder="Username" required="" />
+                                <input type="text" name="username" class="form-control" placeholder="Username" required="" />
                             </div>
                             <div>
-                                <input type="email" class="form-control" placeholder="Email" required="" />
+                                <input type="email" name="email" class="form-control" placeholder="Email" required="" />
                             </div>
                             <div>
-                                <input type="password" class="form-control" placeholder="Password" required="" />
+                                <input type="password" name="password" class="form-control" placeholder="Password" required="" />
                             </div>
                             <div>
-                                <a class="btn btn-default submit" href="index.html">Submit</a>
+                                <input type="submit" class="btn btn-default submit" value="Submit">
                             </div>
 
                             <div class="clearfix"></div>
@@ -85,8 +90,8 @@
                                 <br />
 
                                 <div>
-                                    <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                                    <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                                    <h1><i class="fa fa-medkit"></i> Hospital Management System</h1>
+                                    <p>© 2018 All Rights Reserved</p>
                                 </div>
                             </div>
                         </form>

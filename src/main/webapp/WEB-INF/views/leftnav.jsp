@@ -8,7 +8,7 @@
 
 <div class="left_col scroll-view">
     <div class="navbar nav_title" style="border: 0;">
-        <a href="${cp}/admin/dashboard" class="site_title"><i class="fa fa-medkit"></i> <span>Elvin Hospital</span></a>
+        <a href="${cp}/admin/dashboard" class="site_title"><i class="fa fa-medkit"></i> <span>H M System</span></a>
     </div>
 
     <div class="clearfix"></div>
@@ -77,14 +77,15 @@
         <div class="menu_section">
             <h3>Extra Activities</h3>
             <ul class="nav side-menu">
-                <li><a><i class="fa fa-group"></i> Events <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-calendar"></i> Events <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="${cp}/admin/event/display">Display Events</a></li>
                     </ul>
                 </li>
-                <li><a><i class="fa fa-usd"></i> Donations <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="${cp}/admin/donation/display">Display Donations</a></li>
+                        <li><a href="${cp}/admin/user/display">Display Users</a></li>
+                        <li><a href="${cp}/admin/user/edit">Edit Users</a></li>
                     </ul>
                 </li>
                 <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
