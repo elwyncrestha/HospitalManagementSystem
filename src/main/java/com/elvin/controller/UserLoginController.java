@@ -52,7 +52,7 @@ public class UserLoginController {
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }
         model.addAttribute("LogoutMessage", "Logout successful !!!");
-        return "login";
+        return "redirect:/index";
     }
     
     @Autowired
