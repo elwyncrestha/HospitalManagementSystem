@@ -39,13 +39,16 @@ public class IndexController {
     public String addContact(@ModelAttribute("ContactDetails") ContactMe contactMe){
         contactMeService.addContactor(contactMe);
         
-        MailService mailService = new MailService();
-        mailService = mailService.getMailService();
+//        MailService mailService = new MailService();
+//        mailService = mailService.getMailService();
+//        
+//        String contactDetails = "Contact name: " + contactMe.getContactName() + "\nContact Email: " + contactMe.getContactEmail() + "\nContact Number: " + contactMe.getContactNumber() + "\nContact Message: " + contactMe.getContactMessage();
+//                
+//        mailService.sendDetailMail("elvinjava1@gmail.com", "elwyncrestha@gmail.com", "New Person Trying to Contact",contactDetails);
         
         String contactDetails = "Contact name: " + contactMe.getContactName() + "\nContact Email: " + contactMe.getContactEmail() + "\nContact Number: " + contactMe.getContactNumber() + "\nContact Message: " + contactMe.getContactMessage();
-                
-        mailService.sendDetailMail("elvinjava1@gmail.com", "elwyncrestha@gmail.com", "New Person Trying to Contact",contactDetails);
-        
+        MailService mailService = new MailService("elvinjava1@gmail.com","elwyncrestha@gmail.com","New Person Trying to Contact",contactDetails);
+
         return "redirect:/index";
     }
     

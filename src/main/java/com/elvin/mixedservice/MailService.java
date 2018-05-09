@@ -18,6 +18,15 @@ public class MailService {
 
     private MailSender mailSender;
     private SimpleMailMessage simpleMailMessage;
+    
+    public MailService(){
+    }
+    
+    public MailService(String from, String to, String subject, String msg){
+        MailService mailService = new MailService();
+        mailService = mailService.getMailService();
+        mailService.sendDetailMail(from, to, subject, msg);
+    }
 
     public void setSimpleMailMessage(SimpleMailMessage simpleMailMessage) {
         this.simpleMailMessage = simpleMailMessage;

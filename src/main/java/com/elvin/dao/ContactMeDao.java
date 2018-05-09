@@ -6,6 +6,7 @@
 package com.elvin.dao;
 
 import com.elvin.modal.ContactMe;
+import java.util.List;
 
 /**
  *
@@ -18,5 +19,9 @@ public interface ContactMeDao {
     void delete(ContactMe contactMe);
     
     long count();
+    
+    List<ContactMe> display();
+    
+    ContactMe getById(int id);
     
 }

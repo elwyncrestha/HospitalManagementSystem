@@ -6,6 +6,7 @@
 package com.elvin.service;
 
 import com.elvin.modal.ContactMe;
+import java.util.List;
 
 /**
  *
@@ -15,8 +16,10 @@ public interface ContactMeService {
     
     void addContactor(ContactMe contactMe);
     
-    void deleteContactor(ContactMe contactMe);
+    void deleteContactor(int id);
     
     long countContactors();
+    
+    List<ContactMe> displayContactors();
     
 }

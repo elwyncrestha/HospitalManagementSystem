@@ -6,9 +6,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cp" value="${pageContext.request.contextPath}"></c:set>
 
-<div class="left_col scroll-view">
-    <div class="navbar nav_title" style="border: 0;">
-        <a href="${cp}/admin/dashboard" class="site_title"><i class="fa fa-medkit"></i> <span>H M System</span></a>
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="${cp}/admin/dashboard" class="site_title"><i class="fa fa-medkit"></i> <span>H M S</span></a>
     </div>
 
     <div class="clearfix"></div>
@@ -17,24 +17,24 @@
     <div class="profile clearfix">
         <div class="profile_pic">
             <img src="<c:url value = "/resources/images/img.jpg"></c:url>" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Elvin Shrestha</h2>
+            </div>
         </div>
-        <div class="profile_info">
-            <span>Welcome,</span>
-            <h2>Elvin Shrestha</h2>
-        </div>
-    </div>
-    <!-- /menu profile quick info -->
+        <!-- /menu profile quick info -->
 
-    <br />
+        <br />
 
-    <!-- sidebar menu -->
-    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-        <div class="menu_section">
-            <h3>General</h3>
-            <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="${cp}/admin/dashboard">Admin Home</a></li>
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                    <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="${cp}/admin/dashboard">Admin Home</a></li>
                     </ul>
                 </li>
                 <li><a><i class="fa fa-user-md"></i> Doctors <span class="fa fa-chevron-down"></span></a>
@@ -88,19 +88,28 @@
                         <li><a href="${cp}/admin/user/edit">Edit Users</a></li>
                     </ul>
                 </li>
-                <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-sitemap"></i> Others <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="#level1_1">Level One</a>
+                        <li><a>Contacts<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li class="sub_menu"><a href="${cp}/admin/contact/display">Display Contacts</a>
+                                </li>
+                                <li class="sub_menu"><a href="${cp}/admin/contact/delete">Delete Contacts</a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <li><a>Level One<span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <li class="sub_menu"><a href="level2.html">Level Two</a>
                                 </li>
-                                <li><a href="#level2_1">Level Two</a>
+                                <li class="sub_menu"><a href="#level2_1">Level Two</a>
                                 </li>
-                                <li><a href="#level2_2">Level Two</a>
+                                <li class="sub_menu"><a href="#level2_2">Level Two</a>
                                 </li>
                             </ul>
                         </li>
+
                         <li><a href="#level1_2">Level One</a>
                         </li>
                 </li>
