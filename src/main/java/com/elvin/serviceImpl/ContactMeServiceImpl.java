@@ -8,6 +8,7 @@ package com.elvin.serviceImpl;
 import com.elvin.dao.ContactMeDao;
 import com.elvin.modal.ContactMe;
 import com.elvin.service.ContactMeService;
+import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,13 +30,19 @@ public class ContactMeServiceImpl implements ContactMeService{
     }
 
     @Override
-    public void deleteContactor(ContactMe contactMe) {
+    public void deleteContactor(int id) {
+        ContactMe contactMe = contactMeDao.getById(id);
         contactMeDao.delete(contactMe);
     }
 
     @Override
     public long countContactors() {
         return contactMeDao.count();
+    }
+
+    @Override
+    public List<ContactMe> displayContactors() {
+        return contactMeDao.display();
     }
     
 }

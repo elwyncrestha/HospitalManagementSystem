@@ -19,11 +19,10 @@
                     <!--              <div class="dropdown">-->
                     <a class="nav-link dropbtn">CATEGORIES</a>
                     <div class="dropdown-content">
-                        <a href="#">Doctors</a>
-                        <a href="#">Nurse</a>
-                        <a href="#">Patient</a>
-                        <a href="#">Department</a>
-                        <a href="#">Service</a>
+                        <a href="${pageContext.request.contextPath}/hospital/doctor/display">Doctors</a>
+                        <a href="${pageContext.request.contextPath}/hospital/nurse/display">Nurse</a>
+                        <a href="${pageContext.request.contextPath}/hospital/department/display">Department</a>
+                        <a href="${pageContext.request.contextPath}/hospital/service/display">Service</a>
                         <a href="${pageContext.request.contextPath}/admin/dashboard">Admin Login</a>
                     </div>
                     <!--				</div>-->
