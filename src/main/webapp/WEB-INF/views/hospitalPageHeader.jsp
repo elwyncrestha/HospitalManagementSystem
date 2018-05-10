@@ -15,16 +15,16 @@
 
 <link rel="shortcut icon" href="<c:url value ="/resources/images/hos.png"></c:url>" />
 
-<!-- Bootstrap core CSS -->
-<link href="<c:url value = "/resources/vendor/bootstrap/css/bootstrap.min.css"></c:url>" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="<c:url value = "/resources/vendor/bootstrap/css/bootstrap.min.css"></c:url>" rel="stylesheet">
 
-<!-- Custom fonts for this template -->
-<link href="<c:url value="/resources/vendor/font-awesome/css/font-awesome.min.css"></c:url>" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <!-- Custom fonts for this template -->
+    <link href="<c:url value="/resources/vendor/font-awesome/css/font-awesome.min.css"></c:url>" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 
-<!-- Custom styles for this template -->
-<link href="<c:url value="/resources/css/clean-blog.min.css"></c:url>" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="<c:url value="/resources/css/clean-blog.min.css"></c:url>" rel="stylesheet">
 
-<!---Elvin Custom styles --->
-<link type="text/css" rel="stylesheet" href="<c:url value="/resources/css/custom-stylesheet.css"></c:url>" />
+    <!---Elvin Custom styles --->
+    <link type="text/css" rel="stylesheet" href="<c:url value="/resources/css/custom-stylesheet.css"></c:url>" />

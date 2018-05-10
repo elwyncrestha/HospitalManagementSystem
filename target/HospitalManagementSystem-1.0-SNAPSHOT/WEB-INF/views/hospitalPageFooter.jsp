@@ -18,6 +18,6 @@
     <script src="<c:url value="/resources/js/contact_me.js"></c:url>"></script>
 
     <!-- added while hospitalContact -->
-
+    
     <!-- Custom scripts for this template -->
     <script src="<c:url value="/resources/js/clean-blog.min.js"></c:url>"></script>
