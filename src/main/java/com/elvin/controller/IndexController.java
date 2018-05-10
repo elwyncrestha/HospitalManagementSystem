@@ -55,8 +55,9 @@ public class IndexController {
 //        mailService.sendDetailMail("elvinjava1@gmail.com", "elwyncrestha@gmail.com", "New Person Trying to Contact",contactDetails);
         
         String contactDetails = "Contact name: " + contactMe.getContactName() + "\nContact Email: " + contactMe.getContactEmail() + "\nContact Number: " + contactMe.getContactNumber() + "\nContact Message: " + contactMe.getContactMessage();
+        String replyEmail = contactMe.getContactEmail();
         MailService mailService = new MailService("elvinjava1@gmail.com","elwyncrestha@gmail.com","New Person Trying to Contact",contactDetails);
-
+        MailService mailService1 = new MailService("elvinjava1@gmail.com", replyEmail, "Hospital Management System", "Thank you for contacting us !!! \nWe will reply you soon.");
         return "redirect:/index";
     }
     
