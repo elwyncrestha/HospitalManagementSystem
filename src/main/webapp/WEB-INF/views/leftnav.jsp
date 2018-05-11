@@ -82,12 +82,12 @@
                         <li><a href="${cp}/admin/event/display">Display Events</a></li>
                     </ul>
                 </li>
-                <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
+<!--                <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="${cp}/admin/user/display">Display Users</a></li>
                         <li><a href="${cp}/admin/user/edit">Edit Users</a></li>
                     </ul>
-                </li>
+                </li>-->
                 <li><a><i class="fa fa-sitemap"></i> Others <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a>Contacts<span class="fa fa-chevron-down"></span></a>
@@ -99,7 +99,7 @@
                             </ul>
                         </li>
 
-                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
+<!--                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <li class="sub_menu"><a href="level2.html">Level Two</a>
                                 </li>
@@ -111,7 +111,7 @@
                         </li>
 
                         <li><a href="#level1_2">Level One</a>
-                        </li>
+                        </li>-->
                 </li>
             </ul>
             </li>                  
