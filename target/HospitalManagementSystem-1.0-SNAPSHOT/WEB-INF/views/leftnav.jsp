@@ -16,7 +16,7 @@
     <!-- menu profile quick info -->
     <div class="profile clearfix">
         <div class="profile_pic">
-            <img src="<c:url value = "/resources/images/img.jpg"></c:url>" alt="..." class="img-circle profile_img">
+            <img src="<c:url value = "/resources/images/img.png"></c:url>" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
                 <span>Welcome,</span>
