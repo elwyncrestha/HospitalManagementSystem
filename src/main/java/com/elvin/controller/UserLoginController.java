@@ -64,26 +64,26 @@ public class UserLoginController {
         return "redirect:/login";
     }
     
-    @GetMapping(value = "/admin/user/display")
-    public String displayUsers(Model model){
-        model.addAttribute("UserDetails", userLoginService.displayUsers());
-        return "displayUsers";
-    }
+//    @GetMapping(value = "/admin/user/display")
+//    public String displayUsers(Model model){
+//        model.addAttribute("UserDetails", userLoginService.displayUsers());
+//        return "displayUsers";
+//    }
+//    
+//    @GetMapping(value = "/admin/user/edit")
+//    public String displayEditUsers(Model model){
+//        model.addAttribute("UserDetails", userLoginService.displayUsers());
+//        return "editUser";
+//    }
     
-    @GetMapping(value = "/admin/user/edit")
-    public String displayEditUsers(Model model){
-        model.addAttribute("UserDetails", userLoginService.displayUsers());
-        return "editUser";
-    }
-    
-    @GetMapping(value = "/admin/user/edit/{id}")
-    public String displayEditUsers(@PathVariable("id") int id, Model displayModel, Model editModel){
-        UserLogin userLogin = userLoginService.getUserById(id);
-        editModel.addAttribute("EditUserDetails", userLogin);
-        
-        displayModel.addAttribute("UserDetails", userLoginService.displayUsers());
-        return "editUser";
-    }
+//    @GetMapping(value = "/admin/user/edit/{id}")
+//    public String displayEditUsers(@PathVariable("id") int id, Model displayModel, Model editModel){
+//        UserLogin userLogin = userLoginService.getUserById(id);
+//        editModel.addAttribute("EditUserDetails", userLogin);
+//        
+//        displayModel.addAttribute("UserDetails", userLoginService.displayUsers());
+//        return "editUser";
+//    }
     
     @RequestMapping(value = "/user/reset", method = RequestMethod.GET)
     public String resetPassword(){
