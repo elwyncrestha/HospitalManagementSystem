@@ -16,7 +16,7 @@
     <!-- menu profile quick info -->
     <div class="profile clearfix">
         <div class="profile_pic">
-            <img src="<c:url value = "/resources/images/img.jpg"></c:url>" alt="..." class="img-circle profile_img">
+            <img src="<c:url value = "/resources/images/img.png"></c:url>" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
                 <span>Welcome,</span>
@@ -132,8 +132,8 @@
         <a data-toggle="tooltip" data-placement="top" title="Lock">
             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+        <a data-toggle="tooltip" data-placement="top" title="Logout" href="${pageContext.request.contextPath}/logout">
+            <span class="glyphicon glyphicon-off" aria-hidden="true" style="color:orange;"></span>
         </a>
     </div>
     <!-- /menu footer buttons -->
