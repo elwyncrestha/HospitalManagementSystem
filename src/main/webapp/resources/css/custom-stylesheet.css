@@ -28,7 +28,7 @@
     padding: 10px 14px;
     text-decoration: none;
     display: block;
-	font-size: 12px;
+    font-size: 12px;
 }
 
 .dropdown-content a:hover {background-color: #ddd}
@@ -42,7 +42,21 @@
 }
 
 .dropdown:hover {
-	color:#000;
+    color:#000;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
 
 /* for image heading caption */
