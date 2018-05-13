@@ -16,7 +16,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <!--              <div class="dropdown">-->
                     <a class="nav-link dropbtn">CATEGORIES</a>
                     <div class="dropdown-content">
                         <a href="${pageContext.request.contextPath}/hospital/doctor/display">Doctors</a>
@@ -25,13 +24,6 @@
                         <a href="${pageContext.request.contextPath}/hospital/service/display">Service</a>
                         <a href="${pageContext.request.contextPath}/admin/dashboard">Admin Login</a>
                     </div>
-                    <!--				</div>-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">EVENTS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/hospital/contact/display">CONTACT</a>
