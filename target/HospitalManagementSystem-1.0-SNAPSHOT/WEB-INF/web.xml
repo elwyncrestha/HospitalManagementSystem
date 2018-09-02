@@ -30,6 +30,7 @@
     
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+        <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
     </listener>
     
     <filter>
@@ -46,5 +47,9 @@
         <session-timeout>
             30
         </session-timeout>
+        <!-- This chooses where to store the JSESSIONID – in the cookie or in a URL parameter. -->
+        <tracking-mode>
+            COOKIE
+        </tracking-mode>
     </session-config>
 </web-app>
