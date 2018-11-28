@@ -39,12 +39,12 @@ public class AdminController {
     PatientService patientService;
     
     @RequestMapping(value = "/admin/dashboard", method = RequestMethod.GET)
-    public String displayAdminHome(Model modelCountDoc, Model modelCountNurse, Model modelCountService, Model modelCountDepartment, Model modelCountPatient){
-        modelCountDoc.addAttribute("CountDoc", doctorService.countDoc());
-        modelCountNurse.addAttribute("CountNurse", nurseService.countNurse());
-        modelCountService.addAttribute("CountService", hServiceService.countService());
-        modelCountDepartment.addAttribute("CountDepartment", departmentService.countDepartments());
-        modelCountPatient.addAttribute("CountPatient", patientService.countPatients());
+    public String displayAdminHome(Model model){
+        model.addAttribute("CountDoc", doctorService.countDoc());
+        model.addAttribute("CountNurse", nurseService.countNurse());
+        model.addAttribute("CountService", hServiceService.countService());
+        model.addAttribute("CountDepartment", departmentService.countDepartments());
+        model.addAttribute("CountPatient", patientService.countPatients());
         return "adminHome";
     }
     
